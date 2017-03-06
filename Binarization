@@ -1,0 +1,6 @@
+from SimpleCV import Image, Color,Camera,Display
+img=Camera(0).getImage()
+yellowTool=img
+yellowDist = yellowTool.colorDistance((223, 191, 29))  
+yellowDistBin = yellowDist.binarize()
+yellowDistBin.save(Display()) 
